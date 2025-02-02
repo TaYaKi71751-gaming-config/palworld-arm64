@@ -19,6 +19,10 @@ do
 		cd "${ORIGIN_PWD}"
 		rm -rf "${ORIGIN_PWD}/palworld/Pal/Binaries"
 	fi
+	cd "${ORIGIN_PWD}/palworld/Pal/Saved/Config/LinuxServer/"
+	git add -A
+	git commit -m "$(date +%s)"
+	git push
 	sudo chown 1000:1000 -R "${ORIGIN_PWD}/palworld"
 	sudo docker-compose up -d
 	sleep 3600
