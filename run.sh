@@ -11,7 +11,7 @@ do
 		while IFS= read -r MAP_PATH
 		do
 			echo ${MAP_PATH}
-			cd "${ORIGIN_PWD}/palworld/Pal/Saved/SaveGames${MAP_PATH}"
+			cd "${ORIGIN_PWD}/palworld/Pal/Saved/SaveGames/${MAP_PATH}"
 			git add -A
 			git commit -m "$(date +%s) ${MAP_PATH}"
 			git push
