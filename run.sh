@@ -12,6 +12,8 @@ do
 		do
 			echo ${MAP_PATH}
 			cd "${ORIGIN_PWD}/palworld/Pal/Saved/SaveGames/${MAP_PATH}"
+			git config user.name "Automated Publisher"
+			git config user.email "actions@users.noreply.github.com"
 			git add -A
 			git commit -m "$(date +%s) ${MAP_PATH}"
 			git push
@@ -20,6 +22,8 @@ do
 		rm -rf "${ORIGIN_PWD}/palworld/Pal/Binaries"
 	fi
 	cd "${ORIGIN_PWD}/palworld/Pal/Saved/Config/LinuxServer/"
+	git config user.name "Automated Publisher"
+ git config user.email "actions@users.noreply.github.com"
 	git add -A
 	git commit -m "$(date +%s)"
 	git push
