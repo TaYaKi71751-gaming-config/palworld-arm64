@@ -29,5 +29,5 @@ do
 	git push
 	sudo chown 1000:1000 -R "${ORIGIN_PWD}/palworld"
 	sudo docker-compose up -d
-	sleep 3600
+	sleep 86400
 done
