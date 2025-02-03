@@ -19,7 +19,7 @@ do
 			git push
 		done < <(printf '%s\n' "${MAP_PATHS}")
 		cd "${ORIGIN_PWD}"
-		rm -rf "${ORIGIN_PWD}/palworld/Pal/Binaries"
+		rm "${ORIGIN_PWD}/palworld/Pal/PalServer.sh"
 	fi
 	cd "${ORIGIN_PWD}/palworld/Pal/Saved/Config/LinuxServer/"
 	git config user.name "Automated Publisher"
